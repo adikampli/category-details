@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 //@EnableFeignClients
-public class PlpHeaderApplication {
+public class CategoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlpHeaderApplication.class, args);
+		SpringApplication.run(CategoryApplication.class, args);
 	}
 
 }
