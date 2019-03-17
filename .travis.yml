@@ -12,6 +12,7 @@ deploy:
   env: "CategoryDetails-env"
   bucket_name: elasticbeanstalk-us-east-2-510852933541
   bucket_path: "category-details"
+  skip_cleanup: true
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
