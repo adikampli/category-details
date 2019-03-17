@@ -1,4 +1,4 @@
-package com.sapient.plpheader;
+package com.sapient.category;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PlpHeaderApplicationTests {
+public class CategoryApplicationTests {
 
 	@Test
 	public void contextLoads() {

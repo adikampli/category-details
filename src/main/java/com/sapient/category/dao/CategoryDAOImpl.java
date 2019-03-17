@@ -120,7 +120,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Override
 	public Category getProducts(int categoryId) {
-		Category category = new Category();
+		
 		ArrayList<Integer> productIds = new ArrayList<>();
 		ArrayList<Product> products = new ArrayList<>();
 
@@ -138,6 +138,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 				}
 			}
 		}
+		Category category = getCategoryDetails(categoryId);
 		category.setProducts(products);
 		return category;
 	}
