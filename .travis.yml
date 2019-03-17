@@ -4,3 +4,16 @@ services:
   - docker
 before_install:
   - docker build -t category-details .
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "category-details"
+  env: "CategoryDetails-env"
+  bucket_name: elasticbeanstalk-us-east-2-510852933541
+  bucket_path: "category-details"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
