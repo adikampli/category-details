@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 WORKDIR /app/category-details
+EXPOSE 6226
 COPY ./.mvn/ ./.mvn
 COPY ./pom.xml .
 COPY mvnw .
