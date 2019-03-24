@@ -1,0 +1,17 @@
+version: '3'
+services:
+  category-details:
+    build: .
+    depends_on:
+      - mysql
+    ports:
+      - 6226:6226
+  mysql:
+    image: mysql
+    environment: 
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_ROOT_HOST=%
+    volumes:
+      - "./data:/var/lib/mysql"
+    ports:
+      - 3306:3306

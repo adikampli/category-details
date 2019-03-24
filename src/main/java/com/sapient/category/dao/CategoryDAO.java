@@ -1,19 +1,19 @@
 package com.sapient.category.dao;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.sapient.category.entity.Category;
 import com.sapient.category.entity.Product;
 
 public interface CategoryDAO {
 
-	public ArrayList<Category> getTopCategories();
+	public List<Category> getTopCategories();
 
-	public ArrayList<Category> getCategoryHierarchy(int depth);
+	public List<Category> getCategoryHierarchy(int depth);
 
 	public Category getCategoryDetails(int id);
 
-	public Category getProducts(int categoryId);
+	public List<Product> getProducts(int categoryId);
 
 	public Product getProductDetails(int productId);
 }

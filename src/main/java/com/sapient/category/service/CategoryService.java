@@ -1,6 +1,6 @@
 package com.sapient.category.service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,11 +15,11 @@ public class CategoryService {
 	@Autowired
 	private CategoryDAO categoryDAO;
 
-	public ArrayList<Category> getTopCategories() {
+	public List<Category> getTopCategories() {
 		return categoryDAO.getTopCategories();
 	}
 
-	public ArrayList<Category> getCategoryHierarchy(int depth) {
+	public List<Category> getCategoryHierarchy(int depth) {
 		return categoryDAO.getCategoryHierarchy(depth);
 	}
 
@@ -27,7 +27,7 @@ public class CategoryService {
 		return categoryDAO.getCategoryDetails(id);
 	}
 
-	public Category getProducts(int categoryId) {
+	public List<Product> getProducts(int categoryId) {
 		return categoryDAO.getProducts(categoryId);
 	}
 

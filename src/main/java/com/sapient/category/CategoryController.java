@@ -1,6 +1,6 @@
 package com.sapient.category;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,14 +16,14 @@ public class CategoryController {
 
 	@Autowired
 	private CategoryService service;
-
+	
 	@GetMapping("/category")
-	public ArrayList<Category> getTopCategories() {
+	public List<Category> getTopCategories() {
 		return service.getTopCategories();
 	}
-
+	
 	@GetMapping("/category/{depth}")
-	public ArrayList<Category> getCategoryHierarchy(@PathVariable(name = "depth") int depth) {
+	public List<Category> getCategoryHierarchy(@PathVariable(name = "depth") int depth) {
 		return service.getCategoryHierarchy(depth);
 	}
 
@@ -33,7 +33,7 @@ public class CategoryController {
 	}
 
 	@GetMapping(path = "/category/id/{categoryId}/product")
-	public Category getProducts(@PathVariable(name = "categoryId") int categoryId) {
+	public List<Product> getProducts(@PathVariable(name = "categoryId") int categoryId) {
 		return service.getProducts(categoryId);
 	}
 
